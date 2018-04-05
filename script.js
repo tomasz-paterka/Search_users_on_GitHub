@@ -44,7 +44,7 @@ class UsersList extends React.Component {
 
 	render() {
 		return (
-			<div className={'users'}>
+			<div className={'users-list'}>
 				{this.users}
 			</div>
 		);
@@ -55,8 +55,12 @@ class UsersList extends React.Component {
 		render() {
 			return (
 				<div>
-					<img src={this.props.user.avatar_url} style={{maxWidth: '100px'}}/>
-					<a href={this.props.user.html_url} target="_blank">{this.props.user.login}</a>
+					<div className={'users'}>
+						<a href={this.props.user.html_url} target="_blank">
+							<img src={this.props.user.avatar_url} style={{maxWidth: '100px'}}/>
+						</a>
+						<a href={this.props.user.html_url} target="_blank">{this.props.user.login}</a>
+					</div>
 				</div>
 			);
 		}
